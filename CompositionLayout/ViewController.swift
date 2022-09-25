@@ -90,12 +90,15 @@ class ViewController: UIViewController {
     
 }
 
+//MARK: UICollectionDataSource Method
+
+
 extension ViewController : UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 20
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return section%3 != 0 ? 1 : 10
+        return section==0 || section%3 != 0 ? 1 : 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
