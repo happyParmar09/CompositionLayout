@@ -67,8 +67,8 @@
 				8B99B1E128DF87F30019AE44 /* Assets.xcassets */,
 				8B99B1E328DF87F30019AE44 /* LaunchScreen.storyboard */,
 				8B99B1E628DF87F30019AE44 /* Info.plist */,
-				8B7E5A4128E04133000483F3 /* HeaderView.swift */,
 				8B7E5A4228E04133000483F3 /* HeaderView.xib */,
+				8B7E5A4128E04133000483F3 /* HeaderView.swift */,
 			);
 			path = CompositionLayout;
 			sourceTree = "<group>";
