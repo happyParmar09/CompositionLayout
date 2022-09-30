@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     
     func createCompositionalLayout() -> UICollectionViewCompositionalLayout{
         
-        let layout = UICollectionViewCompositionalLayout { [weak self] (index, environemt) -> NSCollectionLayoutSection? in
-            return self?.createSectionFor(index: index, environement: environemt)
+        let layout = UICollectionViewCompositionalLayout { (index, environemt) -> NSCollectionLayoutSection? in
+            return self.createSectionFor(index: index, environement: environemt)
         }
         
         return layout
@@ -44,6 +44,8 @@ class ViewController: UIViewController {
         else {
             return createVideoSection()
         }
+        
+       
     }
     func createVideoSection() -> NSCollectionLayoutSection{
         let inset : CGFloat = 2.5
@@ -101,6 +103,7 @@ extension ViewController : UICollectionViewDataSource{
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return section==0 || section%3 != 0 ? 1 : 10
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -115,7 +118,7 @@ extension ViewController : UICollectionViewDataSource{
         }
         
         view.title = indexPath.section%3 == 0 && indexPath.section != 0 ? "SHORTS" : ""
-        
+
         return view
     }
     
