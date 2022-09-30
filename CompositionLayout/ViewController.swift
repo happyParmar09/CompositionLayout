@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         //creating group
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.3))
         
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize , subitems : [item])
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize , subitem : item , count: 1)
         
         
         //section
